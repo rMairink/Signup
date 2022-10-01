@@ -93,13 +93,57 @@ form{
     cursor: pointer;
 }
 
+.verification{
+    position: absolute;
+    top: 0;
+    left: 360px !important;
+    visibility: hidden;
+}
+
+.control-form.error .verification{
+    visibility: visible;
+    color: #ff0000
+}
+
+.control-form.success .verification{
+    visibility: visible;
+    color: #008000
+}
+
+
+
+/*  Validation Start*/
+
+    .control-form.error input{
+        border-bottom: 2px solid #ff0000;
+    }
+
+    /* .control-form.error span{
+        color: #ff0000
+    } */
+/* 
+    .control-form.success span{
+        color: #008000
+    } */
+
+    .control-form.success input{
+        border-bottom: 2px solid #008000
+    }
+
+    .control-form.success small{
+        color: #008000
+    }
+
+
+/*  Validation End */
+
 
 
 /* Animation Input Start */
 
     .control-form span{
         position: absolute;
-        top: 10px;
+        top: 8px;
         left: 0;
         padding: 0 5px;
     }
@@ -107,7 +151,7 @@ form{
     .control-form input:focus + span,
     .control-form input:valid + span{
         transition: .4s;
-        top: -12px;
+        top: -15px;
     }
 
     /* .control-form.error input:focus + span,
