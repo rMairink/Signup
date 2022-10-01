@@ -17,22 +17,19 @@ function validationForm(){
     const verifyPasswordValue = verifyPassword.value.trim()
 
 
+
     if(usernameValue === ''){
         validationError(username, 'Invalid Field')
     }else{
         validationSuccess(username, 'Valid Field')        
     }
 
-    if(emailValue === ''){
+    if(!email.checkValidity()){
         validationError(email, 'Invalid Field')
+        console.log('Erro')
     }else{
         validationSuccess(email, 'Valid Field')
-    }
-
-    if(emailValue.indexOf('@') === -1 || emailValue.indexOf('.') === -1 || (emailValue.indexOf('.') - emailValue.indexOf('@') === 1)){
-        validationError(email, 'Invalid Field')
-    }else{
-        validationSuccess(email, 'Valid Field')
+        console.log('Sucesso')
     }
 
     if(passwordValue === '' || passwordValue.length <= 5){
