@@ -63,4 +63,7 @@ function validationSuccess(input, message){
     small.innerText = message
 
     formControl.classList = 'control-form success'
+    setTimeout(() => {
+        alert('Você foi HACKEADO RSRS')
+    }, 500);
 }
